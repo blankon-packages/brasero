@@ -2,7 +2,7 @@ This package was debianized by Ondřej Surý <ondrej@debian.org> on
 Fri, 12 May 2006 15:46:36 +0200.
 
 It was downloaded from:
-    http://ftp.gnome.org/pub/GNOME/sources/brasero/
+    https://download.gnome.org/sources/brasero/
 
 Upstream Author:
     Philippe Rouquier <bonfire-app@wanadoo.fr>
@@ -95,5 +95,5 @@ The help is licensed under the GFDL:
           by the Free Software Foundation with no Invariant Sections,
           no Front-Cover Texts, and no Back-Cover Texts.
 
-On Debian systems, the complete text of the GNU Lesser General
-Public License can be found in `/usr/share/common-licenses/GFDL'.
+On Debian systems, the complete text of the GNU Free Documentation License
+can be found in `/usr/share/common-licenses/GFDL-1.3'.

@@ -2,21 +2,18 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
-
 Source: brasero
 Section: gnome
 Priority: optional
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>
-Build-Depends: debhelper (>= 8),
-               autotools-dev,
-               dh-autoreconf,
-               cdbs,
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Jordi Mallach <jordi@debian.org>, Josselin Mouette <joss@debian.org>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
+Build-Depends: debhelper (>= 10),
+               gnome-common,
                gnome-pkg-tools (>= 0.7),
                yelp-tools,
                gtk-doc-tools (>= 1.12),
                pkg-config,
-               libcam-dev [kfreebsd-any],
                libglib2.0-dev (>= 2.29.14),
                libgstreamer1.0-dev (>= 0.11.92),
                libgstreamer-plugins-base1.0-dev (>= 0.11.92),
@@ -27,31 +24,31 @@ Build-Depends: debhelper (>= 8),
                libnotify-dev (>= 0.6.1),
                libcanberra-dev (>= 0.1),
                libcanberra-gtk3-dev (>= 0.1),
-               libnautilus-extension-dev (>= 2.91.90),
+               libnautilus-extension-dev (>= 3.21.92-3~),
                libburn-dev (>= 0.4.0),
                libisofs-dev (>= 0.6.4),
-               libtracker-sparql-0.14-dev (>= 0.14),
+               libtracker-sparql-1.0-dev (>= 1.0),
                libtotem-plparser-dev (>= 2.32),
                gobject-introspection (>= 0.6.3),
                libgirepository1.0-dev (>= 0.6.3),
-               intltool (>= 0.35.0),
+               intltool (>= 0.50),
                libglib2.0-doc,
                libgtk-3-doc
-Standards-Version: 3.9.4
-Homepage: http://www.gnome.org/projects/brasero/
-Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/brasero/
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/brasero/
+Standards-Version: 3.9.8
+Homepage: https://wiki.gnome.org/Apps/Brasero
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/brasero/
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/brasero/
 
 Package: brasero
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          gstreamer1.0-plugins-base (>= 0.11.92),
-         gnome-icon-theme,
          gvfs,
          libbrasero-media3-1 (= ${binary:Version}),
          brasero-common (= ${source:Version})
-Recommends: yelp
+Recommends: yelp,
+            brasero-cdrkit
 Suggests: vcdimager,
           libdvdcss2,
           tracker
@@ -77,6 +74,7 @@ Description: CD/DVD burning application for GNOME
 
 Package: brasero-common
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Replaces: brasero (<< 2.26)
 Breaks: brasero (<< 2.26)
@@ -88,6 +86,7 @@ Description: Common files for the Brasero CD burning application and library
 
 Package: brasero-cdrkit
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libbrasero-media3-1 (= ${binary:Version}),
@@ -110,12 +109,12 @@ Description: cdrkit extensions for the Brasero burning application
 
 Package: libbrasero-media3-1
 Architecture: any
+Multi-Arch: same
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          brasero-common (= ${source:Version})
-Recommends: gnome-icon-theme,
-            gstreamer1.0-plugins-good,
+Recommends: gstreamer1.0-plugins-good,
             gstreamer1.0-plugins-ugly,
             cdrdao (>= 1:1.2.3)
 Suggests: gstreamer1.0-plugins-bad
@@ -127,6 +126,7 @@ Description: CD/DVD burning library for GNOME - runtime
 
 Package: libbrasero-media3-dev
 Architecture: any
+Multi-Arch: same
 Section: libdevel
 Depends: libbrasero-media3-1 (= ${binary:Version}),
          gir1.2-brasero-3.0 (= ${binary:Version}),
@@ -143,6 +143,7 @@ Description: CD/DVD burning library for GNOME - development
 
 Package: gir1.2-brasero-3.0
 Architecture: any
+Multi-Arch: same
 Section: introspection
 Depends: ${gir:Depends},
          ${misc:Depends},

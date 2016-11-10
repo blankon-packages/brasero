@@ -1,3 +1,100 @@
+brasero (3.12.1-4blankon1) tambora; urgency=medium
+
+  * New Upstream Updates
+  * Merge Whit sid
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Thu, 10 Nov 2016 22:35:42 +0700
+
+brasero (3.12.1-4) unstable; urgency=medium
+
+  * Bump Build-Depends on libnautilus-extension-dev to (>= 3.21.92-3~) to
+    ensure we have a version with multiarch support. (Closes: #839225)
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 30 Sep 2016 14:36:20 +0200
+
+brasero (3.12.1-3) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Convert from cdbs to dh
+  * Bump dh compat to 10
+  * Add debian/docs to install AUTHORS, NEWS, README
+  * Enable all hardening flags
+  * debian/control.in:
+    - Explicitly build-depend on gnome-common (Closes: #837858)
+  * Add allow-overriding-plugin-directory.patch:
+    - Allow overriding plugin install directory with environment variable
+  * Add 01_current_libdvdcss_symbol.patch:
+    - Fix detection of newer libdvdcss2 versions (Closes: #800833)
+
+  [ Jordi Mallach ]
+  * Fix reference to GFDL in copyright.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 22 Sep 2016 00:58:53 +0200
+
+brasero (3.12.1-2) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * Remove Debian menu entry.
+
+  [ Laurent Bigonville ]
+  * debian/control.in: Drop gnome-icon-theme from the dependencies, do not
+    force an icon theme and rely on the one installed by the metapackages
+  * debian/control.in: Bump Standards-Version to 3.9.8 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 05 Jun 2016 02:51:01 +0200
+
+brasero (3.12.1-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release (3.12.0).
+  * Drop 01_fix-plugin-dialog-segfault.patch, fixed upstream
+
+  [ Michael Biebl ]
+  * New upstream release (3.12.1).
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 26 May 2015 22:24:10 +0200
+
+brasero (3.11.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Recommend brasero-cdrkit to avoid a cd ejection issue (closes: #772567)
+    - Thanks to Santiago Villa.
+
+ -- Michael Gilbert <mgilbert@debian.org>  Sat, 31 Jan 2015 19:55:32 +0000
+
+brasero (3.11.4-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix segfault at startup (Closes: #762453)
+    - Drop debian/patches/01_tracker-1.0.patch: Applied upstream
+    - Bump intltool build-dependency to 0.50
+  * debian/control.in:
+    - Update Homepage URL
+    - Bump Standards-Version to 3.9.6 (no further changes)
+  * debian/brasero.install: Install appdata file
+  * Add debian/brasero.lintian-overrides: Override warnings regarding
+    brasero-nautilus.desktop file, it's used for the nautilus extension
+  * Add d/p/01_fix-plugin-dialog-segfault.patch: Fix segfault when displaying
+    the plugin dialog
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 04 Oct 2014 15:48:52 +0200
+
+brasero (3.10.0-2) unstable; urgency=medium
+
+  * Install typelib files into MA libdir.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Thu, 25 Sep 2014 11:39:58 +0100
+
+brasero (3.10.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove patches, all merged upstream.
+  * Switch to tracker 1.0. (Closes: #741428)
+  * Update symbols file, add new brasero_utils_get_option_group symbol.
+  * Bump Standards-Version to 3.9.5. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 May 2014 01:29:30 +0200
+
 brasero (3.8.0-1blankon1) suroboyo; urgency=low
 
   * New Upstream release 

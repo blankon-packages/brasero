@@ -1,4 +1,5 @@
 libbrasero-burn3.so.1 libbrasero-media3-1 #MINVER#
+* Build-Depends-Package: libbrasero-3-dev
  brasero_blank_dialog_get_type@Base 3.0.0
  brasero_blank_dialog_new@Base 3.0.0
  brasero_burn_action_to_string@Base 3.0.0
@@ -845,6 +846,7 @@ libbrasero-utils3.so.1 libbrasero-media3-1 #MINVER#
  brasero_utils_create_message_dialog@Base 3.0.0
  brasero_utils_debug_message@Base 3.0.0
  brasero_utils_error_quark@Base 3.0.0
+ brasero_utils_get_option_group@Base 3.10.0
  brasero_utils_get_uri_name@Base 3.0.0
  brasero_utils_init@Base 3.0.0
  brasero_utils_make_button@Base 3.0.0
